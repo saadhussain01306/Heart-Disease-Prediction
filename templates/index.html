@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Heart Disease Prediction</h1>
+        </div>
+    </header>
+    <div id="main-content" class="container">
+        <h2>Enter the details</h2>
+        <form action="/predict" method="post">
+            <div>
+                <label>Age:</label>
+                <input type="number" name="age" placeholder="e.g., 56" required>
+            </div>
+            <div>
+                <label>Sex (1 = male, 0 = female):</label>
+                <input type="number" name="sex" placeholder="e.g., 1" required>
+            </div>
+            <div>
+                <label>Chest Pain Type (0-3):</label>
+                <input type="number" name="cp" placeholder="e.g., 1" required>
+            </div>
+            <div>
+                <label>Resting Blood Pressure:</label>
+                <input type="number" name="trestbps" placeholder="e.g., 120" required>
+            </div>
+            <div>
+                <label>Serum Cholestoral (mg/dl):</label>
+                <input type="number" name="chol" placeholder="e.g., 236" required>
+            </div>
+            <div>
+                <label>Fasting Blood Sugar (1 = true, 0 = false):</label>
+                <input type="number" name="fbs" placeholder="e.g., 0" required>
+            </div>
+            <div>
+                <label>Resting Electrocardiographic Results (0-2):</label>
+                <input type="number" name="restecg" placeholder="e.g., 1" required>
+            </div>
+            <div>
+                <label>Maximum Heart Rate Achieved:</label>
+                <input type="number" name="thalach" placeholder="e.g., 178" required>
+            </div>
+            <div>
+                <label>Exercise Induced Angina (1 = yes, 0 = no):</label>
+                <input type="number" name="exang" placeholder="e.g., 0" required>
+            </div>
+            <div>
+                <label>ST Depression Induced by Exercise:</label>
+                <input type="number" name="oldpeak" placeholder="e.g., 0.8" required>
+            </div>
+            <div>
+                <label>Slope of the Peak Exercise ST Segment (0-2):</label>
+                <input type="number" name="slope" placeholder="e.g., 2" required>
+            </div>
+            <div>
+                <label>Number of Major Vessels Colored by Flourosopy (0-3):</label>
+                <input type="number" name="ca" placeholder="e.g., 0" required>
+            </div>
+            <div>
+                <label>Thalassemia (1 = normal, 2 = fixed defect, 3 = reversible defect):</label>
+                <input type="number" name="thal" placeholder="e.g., 2" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
